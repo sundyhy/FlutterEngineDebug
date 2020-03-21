@@ -1,0 +1,26 @@
+include ':fe'
+rootProject.name='FlutterEngineDebug'
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0'
+        //Add debughelper dependency
+        classpath 'com.ydq.android.gradle.build.tool:debughelper:1.0.3'
+    }
+}
+
+ext {
+    // 你想要调试的flutter app
+    hostApk = "/Users/ade/work/FlutterEngineDebug/app-debug.apk"
+    
+    updateJavaClass = true
+    modifyApkDebuggable = true
+    
+    excludeSo = "libhello-jni.so;libyy.so"
+}
+
+apply plugin: 'com.ydq.android.gradle.debug.helper'

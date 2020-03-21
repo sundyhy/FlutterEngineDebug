@@ -1,0 +1,55 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+
+
+    defaultConfig {
+        minSdkVersion 20
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable false
+        }
+
+        release {
+            debuggable false
+        }
+    }
+
+    sourceSets {
+        main {
+            java {
+                include '**/*.java'
+                include '**/*.kt'
+
+                // 如果还需要调试及修改java代码，可以打开下面这句
+                //java.srcDirs = ['src/main/java', '../flutterengine/src/flutter/shell/platform/android']
+            }
+            
+            jniLibs.srcDirs = ['libs', 'lib']
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            version '3.10.2'
+            path "src/main/cpp/CMakeLists.txt"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api 'com.android.support:support-annotations:27.1.1'
+}
