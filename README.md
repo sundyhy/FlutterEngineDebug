@@ -26,6 +26,8 @@
 	
         将需要调试的app apk文件的绝对路径设置在settings.gradle中ext.hostApk中
 
+    注：这里的app为你需要调试的项目编译后的文件，跟本工程无关，非本工程生成
+
 5. 调试flutterengine代码：
     
     1.	用Android Studio打开FlutterEngineDebug工程
