@@ -14,7 +14,7 @@
         执行 sh getfluttersource.sh
 
     该脚本会通过brew安装ant及ninja，然后在flutterengine目录执行gclient sync，获取flutterengine的代码，获取代码的配置在./flutterengine/.gclient里面已配置。
-获取配置后会切换到v1.12.13-hotfixes分支，如果需要其他分支代码，可以修改getfluttersource.sh脚本
+获取配置后会切换到master分支，如果需要其他分支代码，可以修改getfluttersource.sh脚本
 
 3. 编译flutterengine代码：
 	
