@@ -13,7 +13,7 @@
 		
         执行 sh getfluttersource.sh
 
-    该脚本会通过brew安装ant及ninja，然后再flutterengine目录执行gclient sync，获取flutterengine的代码，获取代码的配置在./flutterengine/.gclient里面已配置。
+    该脚本会通过brew安装ant及ninja，然后在flutterengine目录执行gclient sync，获取flutterengine的代码，获取代码的配置在./flutterengine/.gclient里面已配置。
 获取配置后会切换到v1.12.13-hotfixes分支，如果需要其他分支代码，可以修改getfluttersource.sh脚本
 
 3. 编译flutterengine代码：
@@ -34,4 +34,4 @@
     2.	连接手机编译项目
     3.	通过调试启动或者Attach to Android Application
     4.	直接在./flutterengine/src/flutter里面需要调试的C++代码里面打上断点，即可调试
-    5.	如果还需要调试代码，将fe/build.gradle文件里面注释掉的语句java.srcDirs = ['src/main/java', '../flutterengine/src/flutter/shell/platform/android']打开即可
+    5.	如果还需要调试java代码，将fe/build.gradle文件里面注释掉的语句java.srcDirs = ['src/main/java', '../flutterengine/src/flutter/shell/platform/android']打开即可
