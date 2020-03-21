@@ -24,7 +24,7 @@
 
 4. 添加需要调试的app：
 	
-        将需要调试的app apk文件的绝对路径设置再settings.gradle中ext.hostApk中
+        将需要调试的app apk文件的绝对路径设置在settings.gradle中ext.hostApk中
 
 5. 调试flutterengine代码：
     
